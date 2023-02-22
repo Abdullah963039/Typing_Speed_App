@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr: #54B435;
+    --linClr: linear-gradient(315deg, #379237 0%, #54b435 50%, #82cd47 100%);
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.game {
+    background: #eee;
+    min-height: 100vh;
+}
+
+.container {
+    margin: auto;
+    max-width: 900px;
+}
+
+.name {
+    background: var(--linClr);
+    color: #f9f9f9;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.4rem;
+    text-align: center;
+}
+
+.difficult {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    background: #fff;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+}
+
+.difficult div {
+    padding: 0.6rem;
+    background: #f9f9f9;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.difficult div:hover {
+    box-shadow: 0 0px 10px var(--clr);
+    opacity: 1;
+}
+
+.difficult div.active {
+    font-weight: bold;
+    background: var(--clr);
+    color: #fff;
+    opacity: 1;
+}
+
+.message {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.message span {
+    font-weight: bold;
+    color: var(--clr);
+}
+
+.message span::before {
+    content: '{ ';
+}
+
+.message span::after {
+    content: ' }';
+}
+
+.game .start {
+    padding: 1rem;
+    font-weight: bold;
+    background: var(--clr) !important;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.the-word {
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--clr);
+    font-weight: bold;
+    font-size: 4rem;
+    user-select: none;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+.input {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    border: 2px solid var(--clr);
+    outline: none;
+    caret-color: var(--clr);
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+}
+
+.input::placeholder {
+    font-size: 1rem;
+    color: var(--clr);
+    font-weight: bold;
+}
+
+.upcoming-words {
+    background: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    flex-flow: wrap row;
+}
+
+.upcoming-words div {
+    padding: 0.5rem;
+    background: var(--clr);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-align: center;
+    user-select: none;
+    cursor: no-drop;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.control span {
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.finish {
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    padding: 1rem;
+}
+
+.finish .good {
+    color: var(--clr);
+}
+
+.finish .bad {
+    color: #b40000;
+}
+
+.finish button {
+    padding: 1rem 2rem;
+    border: none;
+    background: var(--clr);
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.finish .bad+button {
+    background: #de0f0f;
+}
+
+.finish button:hover {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
